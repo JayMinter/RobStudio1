@@ -1,0 +1,4 @@
+source;share/crop_data/local_setup.bash
+source;share/crop_data/local_setup.dsv
+source;share/crop_data/local_setup.sh
+source;share/crop_data/local_setup.zsh

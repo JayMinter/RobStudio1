@@ -1,0 +1,9 @@
+/home/alec/git/Crop-Guard/crop_data/build/CMakeFiles/uninstall.dir
+/home/alec/git/Crop-Guard/crop_data/build/CMakeFiles/crop_data_uninstall.dir
+/home/alec/git/Crop-Guard/crop_data/build/CMakeFiles/test.dir
+/home/alec/git/Crop-Guard/crop_data/build/CMakeFiles/edit_cache.dir
+/home/alec/git/Crop-Guard/crop_data/build/CMakeFiles/rebuild_cache.dir
+/home/alec/git/Crop-Guard/crop_data/build/CMakeFiles/list_install_components.dir
+/home/alec/git/Crop-Guard/crop_data/build/CMakeFiles/install.dir
+/home/alec/git/Crop-Guard/crop_data/build/CMakeFiles/install/local.dir
+/home/alec/git/Crop-Guard/crop_data/build/CMakeFiles/install/strip.dir
