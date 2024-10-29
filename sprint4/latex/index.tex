@@ -1,0 +1,51 @@
+\hypertarget{index_intro}{}\doxysection{Introduction}\label{index_intro}
+This documentation provides an overview of the \mbox{\hyperlink{classCylinder}{Cylinder}} Detection Node, designed to detect cylindrical objects using laser scan data in ROS 2. The system processes scan data to find cylinder-\/shaped objects in the environment and visualizes them using RViz markers.\hypertarget{index_setup}{}\doxysection{Node Setup}\label{index_setup}
+The system consists of the {\ttfamily \mbox{\hyperlink{classCylinder}{Cylinder}}} node, which subscribes to laser scan and odometry topics to detect and track cylinders.\hypertarget{index_cylinder_node}{}\doxysection{Cylinder Node}\label{index_cylinder_node}
+The {\ttfamily \mbox{\hyperlink{classCylinder}{Cylinder}}} node subscribes to laser scan data ({\ttfamily /scan}) and odometry data ({\ttfamily /odom}). It processes the laser scan data to identify segments and detects cylinders by approximating circles using three points from a segment. Detected cylinders are visualized in RViz via markers.\hypertarget{index_cylinder_detection}{}\doxysection{Cylinder Detection Algorithm}\label{index_cylinder_detection}
+The detection process follows these steps\+:
+\begin{DoxyEnumerate}
+\item {\bfseries{Segment Identification}}\+: Laser scan points are segmented based on proximity.
+\item {\bfseries{\mbox{\hyperlink{classCylinder}{Cylinder}} Detection}}\+: Segments are analyzed by checking the curvature formed by three points, estimating a cylinder based on radius matching.
+\item {\bfseries{Visualization}}\+: Once a cylinder is detected, it is visualized using {\ttfamily visualization\+\_\+msgs\+::\+Marker} in RViz.
+\end{DoxyEnumerate}\hypertarget{index_behaviour}{}\doxysection{Cylinder Detection Behaviour}\label{index_behaviour}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Laser Scan Subscription}}\+: The node receives laser scan data and segments points based on proximity.
+\item {\bfseries{Odometry Update}}\+: The odometry data is used to transform local laser scan points into global coordinates.
+\item {\bfseries{\mbox{\hyperlink{classCylinder}{Cylinder}} Detection}}\+: The node checks for circular patterns in the segments and confirms cylinder detection by matching the radius.
+\item {\bfseries{Visualization}}\+: Detected cylinders are visualized with cylinder markers in RViz.
+\end{DoxyEnumerate}\hypertarget{index_How_to_Run}{}\doxysection{How to Run}\label{index_How_to_Run}
+
+\begin{DoxyItemize}
+\item Open Gazebo Environment\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export TURTLEBOT3\_MODEL=waffle\_pi }
+\DoxyCodeLine{ros2 launch turtlebot3\_gazebo farmwithCylinder.launch.py}
+
+\end{DoxyCode}
+
+\item Open RViz with Pre-\/loaded Map\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export TURTLEBOT3\_MODEL=waffle\_pi }
+\DoxyCodeLine{ros2 launch turtlebot3\_navigation2 navigation2.launch.py map:=\$HOME/ros2\_ws/RTAB\_MAPS/farmWith3CropRows/map\_1728280899.yaml}
+
+\end{DoxyCode}
+
+\item Launch the Node\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ros2 run cylinder cylinder\_node}
+
+\end{DoxyCode}
+
+\item Visualize Cylinders\+: Set RViz to visualize detected cylinders published on the /visualization\+\_\+marker topic.
+\item Teleop around the environment\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export TURTLEBOT3\_MODEL=waffle\_pi }
+\DoxyCodeLine{ros2 run turtlebot3\_teleop teleop\_keyboard}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{index_Expecting}{}\doxysection{What to Expect}\label{index_Expecting}
+Running this code you can expect that when you teleop around the environment with a cylinder object previously unmapped. The code will detect the cylinder object and place a marker on the map which corresponds to it\textquotesingle{}s global coordinate in the map.
+
+ 

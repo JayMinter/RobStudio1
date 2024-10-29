@@ -1,0 +1,10 @@
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/uninstall.dir
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/sprint4_uninstall.dir
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/mainrun.dir
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/test.dir
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/edit_cache.dir
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/rebuild_cache.dir
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/list_install_components.dir
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/install.dir
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/install/local.dir
+/home/andrew/ros2_ws/src/sprint4/build/CMakeFiles/install/strip.dir

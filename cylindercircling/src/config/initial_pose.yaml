@@ -1,0 +1,12 @@
+header:
+  frame_id: "map"
+pose:
+  pose:
+    position:
+      x: -2.079555
+      y: -0.496977
+      z: 0.0
+    orientation:
+      z: 0.026655
+      w: 0.999645
+  covariance: [0.5, 0, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1]

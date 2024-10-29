@@ -1,0 +1,67 @@
+/*!
+
+*/
+
+// without this gap between two doxygen definition, the last group does not get
+// populated properly for some reason.
+
+/*!
+@mainpage Cylinder Detection System
+
+@section intro Introduction
+This documentation provides an overview of the Cylinder Detection Node, designed to detect cylindrical objects using laser scan data in ROS 2. The system processes scan data to find cylinder-shaped objects in the environment and visualizes them using RViz markers.
+
+@section setup Node Setup
+The system consists of the `Cylinder` node, which subscribes to laser scan and odometry topics to detect and track cylinders.
+
+@section cylinder_node Cylinder Node
+The `Cylinder` node subscribes to laser scan data (`/scan`) and odometry data (`/odom`). It processes the laser scan data to identify segments and detects cylinders by approximating circles using three points from a segment. Detected cylinders are visualized in RViz via markers.
+
+@section cylinder_detection Cylinder Detection Algorithm
+The detection process follows these steps:
+1. **Segment Identification**: Laser scan points are segmented based on proximity.
+2. **Cylinder Detection**: Segments are analyzed by checking the curvature formed by three points, estimating a cylinder based on radius matching.
+3. **Visualization**: Once a cylinder is detected, it is visualized using `visualization_msgs::Marker` in RViz.
+
+@section behaviour Cylinder Detection Behaviour
+1. **Laser Scan Subscription**: The node receives laser scan data and segments points based on proximity.
+2. **Odometry Update**: The odometry data is used to transform local laser scan points into global coordinates.
+3. **Cylinder Detection**: The node checks for circular patterns in the segments and confirms cylinder detection by matching the radius.
+4. **Visualization**: Detected cylinders are visualized with cylinder markers in RViz.
+
+@section How_to_Run How to Run
+
+- Open Gazebo Environment:
+  @code{.sh}
+  export TURTLEBOT3_MODEL=waffle_pi 
+  ros2 launch turtlebot3_gazebo farmwithCylinder.launch.py
+  @endcode
+  
+- Open RViz with Pre-loaded Map:
+  @code{.sh}
+  export TURTLEBOT3_MODEL=waffle_pi 
+  ros2 launch turtlebot3_navigation2 navigation2.launch.py map:=$HOME/ros2_ws/RTAB_MAPS/farmWith3CropRows/map_1728280899.yaml
+  @endcode
+
+- Launch the Node:
+  @code{.sh}
+  ros2 run cylinder cylinder_node
+  @endcode
+
+- Visualize Cylinders:
+  Set RViz to visualize detected cylinders published on the /visualization_marker topic.
+
+- Teleop around the environment:
+  @code{.sh}
+  export TURTLEBOT3_MODEL=waffle_pi 
+  ros2 run turtlebot3_teleop teleop_keyboard
+  @endcode
+    
+@section Expecting What to Expect
+
+Running this code you can expect that when you teleop around the environment with a cylinder object previously unmapped. The code will detect the cylinder object and place a marker on the map which corresponds to it's global coordinate in the map.
+
+\image html marker.png "Figure 1 - Detecting Cylinder"
+
+
+*/

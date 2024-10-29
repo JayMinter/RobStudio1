@@ -1,0 +1,4 @@
+source;share/cylindercircling/local_setup.bash
+source;share/cylindercircling/local_setup.dsv
+source;share/cylindercircling/local_setup.sh
+source;share/cylindercircling/local_setup.zsh

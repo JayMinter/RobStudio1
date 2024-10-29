@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20241010-0815-Experimental"
+	Name="AndysPC"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="11.4.0"
+	OSName="Linux"
+	Hostname="AndysPC"
+	OSRelease="6.8.0-45-generic"
+	OSVersion="#45~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Sep 11 15:25:05 UTC 2"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="165"
+	ProcessorCacheSize="16384"
+	NumberOfLogicalCPU="16"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="31929"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="800.039"
+	>
+	<Testing>
+		<StartDateTime>Oct 10 19:15 AEDT</StartDateTime>
+		<StartTestTime>1728548115</StartTestTime>
+		<TestList/>
+		<EndDateTime>Oct 10 19:15 AEDT</EndDateTime>
+		<EndTestTime>1728548115</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

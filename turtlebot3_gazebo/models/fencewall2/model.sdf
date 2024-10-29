@@ -1,0 +1,73 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+  <model name='FenceWall2'>
+    <link name='link_0'>
+      <pose frame=''>0 0 0.112 0 -0 0</pose>
+      <inertial>
+        <mass>1e-08</mass>
+        <inertia>
+          <ixx>0.166667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.166667</iyy>
+          <iyz>0</iyz>
+          <izz>0.166667</izz>
+        </inertia>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+      </inertial>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <collision name='collision'>
+        <geometry>
+          <mesh>
+            <!-- Using the same mesh for collision but modifying its scale -->
+            <uri>model://fencewall2/models/FenceWall2.obj</uri>
+            <!-- Adjusted scale values: reduce x and y, increase z -->
+            <scale>10 10 10</scale>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <bounce/>
+          <friction>
+            <torsional>
+              <ode/>
+            </torsional>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <gravity>1</gravity>
+      <visual name='visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://fencewall2/models/FenceWall2.obj</uri>
+            <scale>10 10 10</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+	<ambient>0.6 0.4 0.2 1</ambient>  <!-- Pale brown for ambient light -->
+          <diffuse>0.6 0.4 0.2 1</diffuse>  <!-- Pale brown for diffuse light -->
+          <specular>0.2 0.2 0.2 1</specular> <!-- Add a slight specular reflection -->
+          <emissive>0 0 0 1</emissive> 
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+    </link>
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>
